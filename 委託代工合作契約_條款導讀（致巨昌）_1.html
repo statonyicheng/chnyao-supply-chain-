@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>委託代工合作契約 說明｜晟曜實業 × 巨昌精密</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#000e2f;
+    --navy-soft:#0a1c45;
+    --yellow:#f4b702;
+    --ink:#1a1f2e;
+    --muted:#5b6172;
+    --line:#e3e6ee;
+    --line-soft:#eef0f5;
+    --paper:#ffffff;
+    --bg:#f6f7fa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Noto Serif TC",serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.88;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{
+    max-width:880px;
+    margin:0 auto;
+    background:var(--paper);
+    box-shadow:0 1px 40px rgba(0,14,47,.08);
+  }
+
+  /* ---------- COVER ---------- */
+  .cover{position:relative;background:var(--navy);color:#fff;overflow:hidden;}
+  .cover .bands{height:14px;display:flex;}
+  .cover .bands span:first-child{flex:1;background:var(--navy);}
+  .cover .bands span:last-child{width:200px;background:var(--yellow);}
+  .cover-body{padding:62px 60px 52px;position:relative;}
+  .cover-eyebrow{
+    font-size:13px;letter-spacing:.36em;color:var(--yellow);
+    font-weight:600;margin-bottom:24px;
+  }
+  .cover h1{
+    font-size:40px;font-weight:900;line-height:1.32;color:#fff;letter-spacing:.01em;
+  }
+  .cover h1 .hl{color:var(--yellow);}
+  .cover-sub{
+    margin-top:24px;font-size:16.5px;color:#cbd2e2;font-weight:400;
+    max-width:600px;line-height:2;
+  }
+  .cover-x{
+    margin-top:40px;display:flex;align-items:center;gap:26px;
+    border-top:1px solid rgba(244,183,2,.32);padding-top:28px;flex-wrap:wrap;
+  }
+  .cover-x .co span{display:block;font-size:11px;letter-spacing:.18em;color:#8b94ab;margin-bottom:5px;}
+  .cover-x .co strong{font-size:17px;color:#fff;font-weight:700;letter-spacing:.02em;}
+  .cover-x .times{font-size:22px;color:var(--yellow);font-weight:300;}
+  .cover-x .term{margin-left:auto;text-align:right;}
+  .cover-x .term span{display:block;font-size:11px;letter-spacing:.18em;color:#8b94ab;margin-bottom:5px;}
+  .cover-x .term strong{font-size:15px;color:#fff;font-weight:600;}
+  .confidential{
+    background:var(--navy);color:#fff;text-align:center;
+    font-size:12px;letter-spacing:.4em;padding:13px;
+    border-top:1px solid rgba(255,255,255,.12);
+  }
+
+  /* ---------- CONTENT ---------- */
+  .content{padding:56px 60px 36px;}
+  section{margin-bottom:54px;}
+  .h1{
+    font-size:24px;font-weight:700;color:var(--navy);
+    padding-bottom:13px;margin-bottom:24px;position:relative;letter-spacing:.01em;
+  }
+  .h1::after{content:"";position:absolute;left:0;bottom:0;width:60px;height:4px;background:var(--yellow);}
+  .h1 .num{font-size:15px;color:var(--yellow);font-weight:700;margin-right:14px;letter-spacing:.05em;}
+  .h2{
+    font-size:18px;font-weight:600;color:var(--ink);
+    border-bottom:1px solid var(--line);padding-bottom:8px;margin:32px 0 16px;letter-spacing:.01em;
+  }
+  p{margin-bottom:15px;color:var(--ink);font-size:15.5px;text-align:justify;}
+  .lead{font-size:17px;color:#33384a;line-height:2.02;}
+  .muted{color:var(--muted);}
+  strong{font-weight:700;color:var(--navy);}
+
+  .callout{
+    background:linear-gradient(180deg,#fbfcfe,#f7f9fc);
+    border-left:4px solid var(--yellow);
+    padding:22px 26px;margin:8px 0 4px;border-radius:0 6px 6px 0;
+  }
+  .callout p:last-child{margin-bottom:0;}
+
+  /* spirit row (3 promises) */
+  .spirit{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:6px;}
+  .spirit .s{text-align:center;padding:26px 18px;border:1px solid var(--line);border-radius:8px;}
+  .spirit .s .ic{font-size:26px;color:var(--yellow);font-weight:900;margin-bottom:10px;font-family:serif;}
+  .spirit .s h4{font-size:16px;color:var(--navy);font-weight:700;margin-bottom:8px;}
+  .spirit .s p{font-size:13px;color:var(--muted);line-height:1.78;margin-bottom:0;text-align:center;}
+
+  /* article list (main contract 18) */
+  .arts{margin-top:4px;}
+  .art{
+    display:flex;gap:20px;padding:17px 0;border-bottom:1px solid var(--line-soft);
+  }
+  .art:last-child{border-bottom:none;}
+  .art .no{
+    flex:0 0 56px;font-size:13px;font-weight:700;color:#fff;background:var(--navy);
+    height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;
+    letter-spacing:.04em;margin-top:2px;
+  }
+  .art .bd{flex:1;}
+  .art .bd h4{font-size:16px;color:var(--navy);font-weight:700;margin-bottom:3px;}
+  .art .bd p{font-size:14px;color:var(--muted);margin-bottom:0;line-height:1.78;text-align:justify;}
+  .art.key{background:#fffdf5;margin:0 -16px;padding-left:16px;padding-right:16px;border-radius:6px;border-bottom:1px solid var(--line-soft);}
+  .art.key .no{background:var(--yellow);color:var(--navy);}
+  .art.key .bd h4{color:var(--navy);}
+
+  /* attachment cards */
+  .scope{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .scope-card{
+    border:1px solid var(--line);border-radius:8px;padding:24px 26px;background:#fff;transition:.2s;
+  }
+  .scope-card:hover{border-color:var(--yellow);box-shadow:0 6px 22px rgba(0,14,47,.06);}
+  .scope-card .tag{
+    display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--navy);
+    padding:3px 11px;border-radius:4px;letter-spacing:.1em;margin-bottom:12px;
+  }
+  .scope-card h3{font-size:16.5px;color:var(--navy);font-weight:700;margin-bottom:9px;}
+  .scope-card p{font-size:13.5px;color:var(--muted);line-height:1.82;margin-bottom:0;text-align:left;}
+  .scope-card .you{font-size:12.5px;color:var(--ink);margin-top:13px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.72;}
+  .scope-card .you b{color:var(--navy);}
+
+  /* tables */
+  table{width:100%;border-collapse:collapse;margin:6px 0 4px;font-size:14px;}
+  thead th{
+    background:var(--navy);color:#fff;font-weight:600;padding:13px 16px;text-align:left;
+    letter-spacing:.03em;border:1px solid var(--navy);
+  }
+  tbody td{padding:12px 16px;border:1px solid var(--line);background:#fff;color:var(--ink);vertical-align:top;line-height:1.7;}
+  tbody tr td:first-child{font-weight:600;color:var(--navy);}
+  .num-cell{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .pos{color:#0a7d3c;font-weight:700;}
+  .neg{color:#b3261e;font-weight:700;}
+  tr.total td{background:var(--navy);color:#fff;font-weight:700;border-color:var(--navy);}
+  tr.total td:first-child{color:var(--yellow);}
+
+  /* benefit band */
+  .fee-band{
+    background:var(--navy);border-radius:10px;padding:32px 40px;color:#fff;
+    display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
+  }
+  .fee-band .label{font-size:13.5px;letter-spacing:.14em;color:#9aa3bb;margin-bottom:8px;}
+  .fee-band .amt{font-size:38px;font-weight:900;color:var(--yellow);line-height:1;}
+  .fee-band .amt small{font-size:16px;font-weight:600;color:#fff;margin-left:8px;}
+  .fee-band .note{font-size:13px;color:#c4cbdb;max-width:320px;line-height:1.8;text-align:right;}
+
+  /* case strip */
+  .cases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:6px;}
+  .case{border:1px solid var(--line);border-top:3px solid var(--yellow);border-radius:0 0 8px 8px;padding:20px;}
+  .case .cname{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+  .case .ctype{font-size:12px;color:var(--muted);margin-bottom:14px;}
+  .case .closs{font-size:25px;font-weight:900;color:#b3261e;line-height:1;}
+  .case .closs small{font-size:12.5px;font-weight:600;color:var(--muted);display:block;margin-top:7px;line-height:1.6;}
+
+  ul.clean{list-style:none;margin:8px 0 4px;}
+  ul.clean li{position:relative;padding-left:24px;margin-bottom:11px;font-size:15px;line-height:1.82;text-align:justify;}
+  ul.clean li::before{content:"";position:absolute;left:2px;top:11px;width:8px;height:8px;background:var(--yellow);border-radius:2px;transform:rotate(45deg);}
+
+  /* closing */
+  .closing{background:var(--navy);border-radius:12px;padding:42px 46px;color:#fff;text-align:center;}
+  .closing h3{font-size:23px;color:#fff;font-weight:700;margin-bottom:16px;letter-spacing:.02em;}
+  .closing h3 span{color:var(--yellow);}
+  .closing p{color:#cbd2e2;font-size:15px;max-width:600px;margin:0 auto;text-align:center;line-height:1.95;}
+
+  /* footer */
+  .foot{
+    border-top:1px solid var(--line);padding:30px 60px 44px;
+    display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;
+    font-size:12.5px;color:var(--muted);
+  }
+  .foot .firm{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+  .foot .disc{max-width:460px;line-height:1.75;}
+  .stamp{font-size:11px;letter-spacing:.18em;color:#9aa3bb;text-align:right;line-height:1.9;}
+
+  @media (max-width:720px){
+    .cover-body,.content,.foot{padding-left:28px;padding-right:28px;}
+    .cover h1{font-size:29px;}
+    .scope,.cases,.spirit{grid-template-columns:1fr;}
+    .fee-band .note{text-align:left;}
+    .cover-x .term{margin-left:0;text-align:left;width:100%;}
+  }
+  @media print{
+    body{background:#fff;}
+    .sheet{box-shadow:none;max-width:100%;}
+    .scope-card:hover{box-shadow:none;}
+    section{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- COVER -->
+  <header class="cover">
+    <div class="bands"><span></span><span></span></div>
+    <div class="cover-body">
+      <div class="cover-eyebrow">委託代工合作契約 · 條款導讀</div>
+      <h1>委託代工合作契約<br><span class="hl">條款導讀</span></h1>
+      <p class="cover-sub">本文件說明這份契約（主約十八條與四份附件）各條款的內容與用意，以及合格訂單（QO）與季度退佣的計算方式，供 貴公司於用印前對照閱讀。實際權責與金額以正式契約條文為準。</p>
+      <div class="cover-x">
+        <div class="co"><span>品牌經營 · 委託方</span><strong>晟曜實業</strong></div>
+        <div class="times">×</div>
+        <div class="co"><span>專業代工 · 受託方</span><strong>巨昌精密</strong></div>
+        <div class="term"><span>合作期間</span><strong>2026.07 – 2029.06　三年</strong></div>
+      </div>
+    </div>
+    <div class="confidential">本導讀供雙方合作溝通使用 · 機密文件</div>
+  </header>
+
+  <div class="content">
+
+    <!-- 開場 -->
+    <section>
+      <h2 class="h1"><span class="num">壹</span>背景與這份契約的設計重點</h2>
+      <p class="lead">客製化板金加工屬個別專案（Case by Case）模式，每案圖面不同、製程環節多，跨越雷切、折床、焊接、外發銑床與烤漆等多道工序。任一環節的尺寸誤差或交期落後，都會往後段累積成重工、退漆、急件加價與額外車趟等成本。</p>
+      <div class="callout">
+        <p>這份契約的設計重點，是把過去仰賴個案協調、容易產生認知落差的環節，明確寫成條款：<strong>圖面如何確認、交期延誤如何預警、品質如何在製程中分站把關、合格訂單（QO）如何認定、季度退佣如何計算</strong>。分工上，晟曜提供設計、規格與訂單，巨昌負責依圖製造與穩定供貨；衍生費用以可歸責之一方負擔為原則。以下逐段說明各條款。</p>
+      </div>
+    </section>
+
+    <!-- 三大精神 -->
+    <section>
+      <h2 class="h1"><span class="num">貳</span>契約的三個運作原則</h2>
+      <div class="spirit">
+        <div class="s">
+          <div class="ic">壹</div>
+          <h4>分工與權責</h4>
+          <p>晟曜負責設計、規格、配方與訂單；巨昌負責依圖製造與穩定供貨。對應主約第一、二條。</p>
+        </div>
+        <div class="s">
+          <div class="ic">貳</div>
+          <h4>製程分站品管</h4>
+          <p>各製程於流往下一站前先完成自主檢驗，未達標不流轉，以減少完工後重工。對應附件三。</p>
+        </div>
+        <div class="s">
+          <div class="ic">參</div>
+          <h4>合格訂單與退佣</h4>
+          <p>準時、合格、自行承製之訂單計入 QO；當季 QO 達門檻按 3% 發給退佣。對應主約第六、九條。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 主約導讀 -->
+    <section>
+      <h2 class="h1"><span class="num">參</span>主約十八條 一次看懂</h2>
+      <p>主約共十八條。以下以白話摘要各條內容，淺底標示者為與 貴公司日常作業直接相關之條款（訂貨、驗收、QO 認定、退佣）。各條完整文字以契約條文為準。</p>
+      <div class="arts">
+        <div class="art"><div class="no">第一條</div><div class="bd"><h4>委託代工之內容及雙方角色</h4><p>晟曜是品牌與委託方，巨昌是受託代工方；雙方是合作關係，不因本約而生僱傭、合夥或代理。</p></div></div>
+        <div class="art"><div class="no">第二條</div><div class="bd"><h4>規格、配方之提供</h4><p>晟曜提供設計圖、規格與製程作為製造依據；巨昌僅於合作目的內使用，不外洩、不改作。</p></div></div>
+        <div class="art"><div class="no">第三條</div><div class="bd"><h4>委託製造期間</h4><p>合作期三年（2026.07–2029.06），期滿前一個月可書面合意續約；期間內巨昌穩定供應、不無故拒單。</p></div></div>
+        <div class="art key"><div class="no">第四條</div><div class="bd"><h4>訂貨、製造及交貨</h4><p>晟曜以正式採購單載明品名、數量、單價、交期與品質；巨昌三個工作日內簽回承接，依約交貨。</p></div></div>
+        <div class="art key"><div class="no">第五條</div><div class="bd"><h4>產品品質及驗收</h4><p>以附件三之品質標準為最低標準；巨昌出貨前檢查並附報告，驗收不合格者更換、補正或退款。</p></div></div>
+        <div class="art key"><div class="no">第六條</div><div class="bd"><h4>合格訂單（QO）之認定</h4><p>準時、合格、自行承製且通過驗收之訂單，按發票金額計入 QO，作為季度退佣的計算基礎。</p></div></div>
+        <div class="art"><div class="no">第七條</div><div class="bd"><h4>產品研發及打樣</h4><p>晟曜得委託巨昌研發打樣；巨昌以善良管理人注意配合，樣品需達可商品化標準並附流程報告。</p></div></div>
+        <div class="art"><div class="no">第八條</div><div class="bd"><h4>獨家委託製造</h4><p>合作期內晟曜就合作產品僅向巨昌訂購；但巨昌若無故拒單或產能不足，晟曜得另尋產能。</p></div></div>
+        <div class="art key"><div class="no">第九條</div><div class="bd"><h4>季度退佣</h4><p>當季 QO 達新臺幣 150 萬元以上者，晟曜按該季 QO 發票金額 3% 發給退佣。</p></div></div>
+        <div class="art"><div class="no">第十條</div><div class="bd"><h4>競業禁止</h4><p>合作期間及結束後二年內，巨昌不製造、販售或代工相同或高度相似之產品。</p></div></div>
+        <div class="art"><div class="no">第十一條</div><div class="bd"><h4>所有權及智慧財產權</h4><p>晟曜提供之設計、配方、Know-how 及共同研發成果之權利均歸晟曜，屬營業秘密受法律保護。</p></div></div>
+        <div class="art"><div class="no">第十二條</div><div class="bd"><h4>保密義務</h4><p>雙方對機密資訊負嚴格保密責任，及於員工與相關人員；保密義務不因契約終止而失效。</p></div></div>
+        <div class="art"><div class="no">第十三條</div><div class="bd"><h4>違約處置</h4><p>違反獨家、競業、智財或保密者，每次違約懲罰性違約金五十萬元；其餘違約依實際損害賠償。</p></div></div>
+        <div class="art"><div class="no">第十四條</div><div class="bd"><h4>禁止轉讓</h4><p>非經他方書面同意，任一方不得將契約權利義務轉讓予第三人。</p></div></div>
+        <div class="art"><div class="no">第十五條</div><div class="bd"><h4>法律適用及管轄</h4><p>以中華民國法律為準據法；爭議先誠信協商，涉訟合意以臺灣桃園地方法院為第一審管轄。</p></div></div>
+        <div class="art"><div class="no">第十六條</div><div class="bd"><h4>契約效力及附件</h4><p>部分條款無效不影響其餘；四份附件均為契約之一部分，與本文同等效力；修改須雙方書面合意。</p></div></div>
+        <div class="art"><div class="no">第十七條</div><div class="bd"><h4>契約之存執</h4><p>本契約一式貳份，雙方各執壹份為憑，自簽署之日起生效。</p></div></div>
+        <div class="art"><div class="no">第十八條</div><div class="bd"><h4>附件清單</h4><p>附件一規格表、附件二訂貨配送、附件三品質驗收、附件四研發打樣，構成完整的合作執行細則。</p></div></div>
+      </div>
+    </section>
+
+    <!-- 四附件 -->
+    <section>
+      <h2 class="h1"><span class="num">肆</span>四份附件說明</h2>
+      <p>四份附件就主約的執行細節作補充規範，分別對應規格圖面、訂貨配送、品質驗收與研發打樣四個環節。每份附件下方並標註該環節對 貴公司作業的實際影響：</p>
+      <div class="scope">
+        <div class="scope-card">
+          <span class="tag">附件一</span>
+          <h3>合作產品品項及規格表</h3>
+          <p>確立「晟曜負責專業圖面整合、巨昌報價即視同審圖」。報價後，圖面之尺寸、公差、註記與既定製程流向即視為雙方共同確認。</p>
+          <p class="you"><b>對 貴公司作業的影響：</b>報價前需充分審圖、將成本一次估足；報價一經確認，即為雙方認可之圖面與公差基準。</p>
+        </div>
+        <div class="scope-card">
+          <span class="tag">附件二</span>
+          <h3>訂貨、生產及配送條件</h3>
+          <p>晟曜不干涉 貴公司每日排程，但建立「交期前三個工作日預警」：有延誤風險時，提前告知進度、原因與新交期即可。</p>
+          <p class="you"><b>對 貴公司作業的影響：</b>有延誤風險時於交期前三個工作日通報即屬正常流程；逾期未報依約視為遲延。</p>
+        </div>
+        <div class="scope-card">
+          <span class="tag">附件三</span>
+          <h3>產品品質管理標準及驗收程序</h3>
+          <p>因機架體積龐大、空間有限，改採「下道製程前自主品管」＋「晟曜 QC 進廠階段檢驗」，並明定限期補正時效。</p>
+          <p class="you"><b>對 貴公司作業的影響：</b>每站需先檢驗再流轉，可避免完工後才發現錯誤所生之重工與料費。</p>
+        </div>
+        <div class="scope-card">
+          <span class="tag">附件四</span>
+          <h3>產品研發及打樣配合標準</h3>
+          <p>規範首件依圖確實製作、複雜組裝之人力配置，以及加工圖面之保密義務（含外協連帶責任）。</p>
+          <p class="you"><b>對 貴公司作業的影響：</b>首件需依圖確實製作、複雜組裝須配置人力；圖面外洩另有保密罰則（每次 50 萬元）。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 退佣機制 -->
+    <section>
+      <h2 class="h1"><span class="num">伍</span>季度退佣計算方式</h2>
+      <p>依主約第九條，當季合格訂單（QO）達門檻時，晟曜按發票金額發給退佣，計算方式如下：</p>
+      <div class="fee-band">
+        <div>
+          <div class="label">季度退佣 · 當季 QO 達新臺幣 150 萬元以上</div>
+          <div class="amt">3%<small>按當季 QO 發票金額（含稅）計算</small></div>
+        </div>
+        <div class="note">準時交貨、通過驗收、自行承製之發票金額方計入 QO；退佣於季結算簽認後，憑發票三十日內匯付。</div>
+      </div>
+      <p class="muted" style="margin-top:18px;font-size:13.5px;">附件三、附件二所定之自主品管與交期預警，是訂單計入 QO 的前提要件；落實後，相關訂單方能累計至退佣門檻。</p>
+    </section>
+
+    <!-- 三案 -->
+    <section>
+      <h2 class="h1"><span class="num">陸</span>近期三案之實際扣款</h2>
+      <p>以下為近期三件實際案例，列出依約自貨款扣抵的金額，供對照配合到位與否在財務上的差異。三案因延誤或品質問題，依約均未計入當季合格訂單（QO）。</p>
+      <div class="cases">
+        <div class="case">
+          <div class="cname">翔緯機械</div>
+          <div class="ctype">自動化檢測設備機架案</div>
+          <div class="closs">−26,800<small>整平＋多餘車趟＋現場代管，另含外發烤漆費</small></div>
+        </div>
+        <div class="case">
+          <div class="cname">申玥科技</div>
+          <div class="ctype">帆布骨架案</div>
+          <div class="closs">−4,800<small>達該單金額 17%，現場代行勞務 6 小時</small></div>
+        </div>
+        <div class="case">
+          <div class="cname">英菲菱科技</div>
+          <div class="ctype">素材加工案</div>
+          <div class="closs">−5,200<small>客供精密件遺失 26 件之重製賠償</small></div>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:14px;font-size:13px;">註：上列金額均依主約及附件之條款計算，自當期應付貨款扣抵；這些都是只要前段配合到位、便完全可以避免的支出。</p>
+
+      <h3 class="h2">退佣門檻的連動影響</h3>
+      <p>三案合計新臺幣 287,490 元因不計入 QO，使該季 QO 自 160 萬降至 1,312,510 元，<strong>未達 150 萬元門檻，原可領取的 3% 季度退佣（48,000 元）也一併落空</strong>。品質與交期沒守住，影響的不只是該筆訂單，而是整季的退佣資格。</p>
+    </section>
+
+    <!-- 對照表 -->
+    <section>
+      <h2 class="h1"><span class="num">柒</span>同一季度的兩種結果</h2>
+      <p>以同一季度、相同訂單量為例，下表對照「未落實配合」與「確實配合契約」兩種情境下，貴公司的實際收款差異：</p>
+      <table>
+        <thead>
+          <tr>
+            <th>財務項目</th>
+            <th class="num-cell">未落實配合</th>
+            <th class="num-cell">確實配合契約</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>原預期季度代工總收入</td><td class="num-cell">1,600,000</td><td class="num-cell">1,600,000</td></tr>
+          <tr><td>翔緯案：整平＋多餘車趟＋代管費</td><td class="num-cell neg">−26,800</td><td class="num-cell pos">0</td></tr>
+          <tr><td>翔緯案：烤漆未完工製程扣除</td><td class="num-cell neg">−外發烤漆費</td><td class="num-cell pos">0</td></tr>
+          <tr><td>申玥案：現場代行勞務（6 小時）</td><td class="num-cell neg">−4,800</td><td class="num-cell pos">0</td></tr>
+          <tr><td>英菲菱案：遺失 26 件重製賠償</td><td class="num-cell neg">−5,200</td><td class="num-cell pos">0</td></tr>
+          <tr><td>季度退佣（主約第九條，3%）</td><td class="num-cell neg">0（未達門檻）</td><td class="num-cell pos">+48,000</td></tr>
+          <tr class="total"><td>該季實際收款</td><td class="num-cell">1,515,200<br><small style="font-weight:400;">（另需扣烤漆費）</small></td><td class="num-cell">1,648,000</td></tr>
+        </tbody>
+      </table>
+      <div class="callout" style="margin-top:22px;">
+        <p style="margin-bottom:0;">兩種情境下，同一季度、相同訂單量的實際收款差距為新臺幣 <strong>132,800 元＋外發烤漆費</strong>。差額來自可避免的扣款（重工、車趟、代管、賠償）與退佣門檻是否達標兩部分。</p>
+      </div>
+    </section>
+
+    <!-- 後續 -->
+    <section>
+      <h2 class="h1"><span class="num">捌</span>履約重點提醒</h2>
+      <ul class="clean">
+        <li><strong>採購單簽回</strong>：晟曜發出採購單後，巨昌應於三個工作日內書面簽回承接，逾期視為拒絕承接（主約第四條）。</li>
+        <li><strong>交期預警</strong>：評估有延誤風險時，於原定交期前三個工作日提出書面通報，載明進度、原因與新交期（附件二）。</li>
+        <li><strong>分站自主品管</strong>：各零件流往下一製程或外發前，先完成尺寸、孔位與公差檢驗，未達標不流轉（附件三）。</li>
+        <li><strong>季度退佣結算</strong>：每季結束後十五日內由晟曜出具 QO 結算單，巨昌七日內書面簽認；達門檻者按 3% 發給退佣（主約第六、九條）。</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div>
+      <div class="firm">晟曜實業有限公司　CHN YAO Industrial</div>
+      <div class="disc">統一編號 93555308　代表人 鍾晉崴<br>本文件為委託代工合作契約（含主約及附件一至四）之條款導讀，供 貴公司用印前對照閱讀；所列財務數字引自近期實際案例，最終權責與金額以正式契約條文及雙方議定為準。<br><span style="display:inline-block;margin-top:8px;color:#8a93a8;">文件製作協力｜仕坦登企業管理顧問有限公司　統一編號 60595769</span></div>
+    </div>
+    <div class="stamp">委託代工合作契約<br>主約 · 附件一 ~ 四 條款導讀<br>CONFIDENTIAL</div>
+  </footer>
+
+</div>
+</body>
+</html>
