@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>委託代工合作契約 ｜ 晟曜實業 × 巨昌精密</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#000e2f;
+  --navy-soft:#0a1a44;
+  --navy-line:#1c2c55;
+  --gold:#f4b702;
+  --gold-deep:#c79400;
+  --paper:#f6f4ef;
+  --paper-2:#ffffff;
+  --ink:#1a2236;
+  --ink-soft:#46506a;
+  --line:#e3ded3;
+  --risk-a:#b8242b;   /* 乙方高風險/義務 */
+  --risk-b:#1f6f4a;   /* 甲方保護/有利 */
+  --shadow:0 18px 50px -28px rgba(0,14,47,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Serif TC",serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+.en{font-family:"Cormorant Garamond",serif;font-style:italic;letter-spacing:.02em}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  background:
+    radial-gradient(120% 90% at 85% -10%, rgba(244,183,2,.16), transparent 55%),
+    linear-gradient(160deg,var(--navy) 0%, var(--navy-soft) 100%);
+  color:#f3f1ec;
+  padding:clamp(56px,9vw,120px) clamp(22px,6vw,90px) clamp(64px,9vw,110px);
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.hero .eyebrow{
+  font-family:"Cormorant Garamond",serif;font-style:italic;
+  color:var(--gold);font-size:clamp(15px,1.5vw,19px);letter-spacing:.16em;
+  text-transform:uppercase;margin-bottom:20px;
+}
+.hero h1{
+  font-weight:700;font-size:clamp(32px,5.4vw,62px);line-height:1.18;
+  letter-spacing:.02em;max-width:16ch;
+}
+.hero h1 b{color:var(--gold);font-weight:900}
+.parties{
+  margin-top:38px;display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;
+  font-size:clamp(15px,1.7vw,20px);
+}
+.party{display:flex;flex-direction:column;gap:2px}
+.party .role{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold);font-size:.8em}
+.party .name{font-weight:600}
+.party .sub{font-size:.72em;color:#aeb6cc;font-family:"Noto Serif TC"}
+.vs{color:var(--gold);font-family:"Cormorant Garamond",serif;font-size:1.6em}
+.hero .meta{
+  margin-top:36px;display:flex;flex-wrap:wrap;gap:10px 14px;
+}
+.chip{
+  border:1px solid rgba(244,183,2,.4);color:#e8e3d6;
+  padding:7px 16px;border-radius:999px;font-size:13.5px;letter-spacing:.04em;
+}
+.chip b{color:var(--gold);font-weight:600}
+
+/* ===== READING NOTE ===== */
+.note{
+  max-width:1080px;margin:46px auto 0;padding:0 clamp(20px,5vw,40px);
+}
+.note .card{
+  background:var(--paper-2);border:1px solid var(--line);border-left:4px solid var(--gold);
+  padding:24px 28px;border-radius:4px;box-shadow:var(--shadow);
+  font-size:15.5px;color:var(--ink-soft);
+}
+.note .card strong{color:var(--navy);font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:16px 24px;margin-top:18px;font-size:13.5px}
+.legend span{display:inline-flex;align-items:center;gap:8px;color:var(--ink-soft)}
+.dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+.dot.a{background:var(--risk-a)} .dot.b{background:var(--risk-b)} .dot.g{background:var(--gold)}
+
+/* ===== LAYOUT ===== */
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+.section-head{margin:64px 0 8px;display:flex;align-items:baseline;gap:16px}
+.section-head .kicker{
+  font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold-deep);
+  font-size:18px;letter-spacing:.1em;
+}
+.section-head h2{font-weight:700;font-size:clamp(22px,3vw,30px);color:var(--navy);letter-spacing:.02em}
+
+/* article cards */
+.art{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:6px;
+  margin-top:18px;overflow:hidden;box-shadow:0 10px 30px -24px rgba(0,14,47,.5);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.art:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.art-top{
+  display:flex;gap:18px;align-items:flex-start;padding:22px 26px;cursor:pointer;
+  border-left:4px solid var(--navy);
+}
+.art-num{
+  font-family:"Cormorant Garamond",serif;font-weight:700;color:var(--gold-deep);
+  font-size:clamp(28px,4vw,40px);line-height:1;min-width:54px;
+}
+.art-titles{flex:1}
+.art-titles h3{font-weight:700;font-size:18px;color:var(--navy);letter-spacing:.02em}
+.art-titles .plain{margin-top:6px;font-size:15px;color:var(--ink-soft);font-weight:400}
+.art-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
+.tag{font-size:12px;padding:3px 11px;border-radius:999px;letter-spacing:.03em;font-weight:500}
+.tag.a{background:rgba(184,36,43,.1);color:var(--risk-a);border:1px solid rgba(184,36,43,.25)}
+.tag.b{background:rgba(31,111,74,.1);color:var(--risk-b);border:1px solid rgba(31,111,74,.25)}
+.tag.g{background:rgba(244,183,2,.14);color:var(--gold-deep);border:1px solid rgba(244,183,2,.4)}
+.chev{color:var(--ink-soft);font-size:20px;transition:transform .3s ease;user-select:none;margin-top:4px}
+.art.open .chev{transform:rotate(180deg)}
+.art-body{
+  max-height:0;overflow:hidden;transition:max-height .4s ease;
+  border-top:0 solid var(--line);
+}
+.art.open .art-body{max-height:1600px;border-top:1px solid var(--line)}
+.art-body-inner{padding:22px 26px 26px 84px}
+.art-body p{font-size:15px;color:var(--ink);margin-bottom:12px}
+.art-body .lbl{
+  font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold-deep);
+  font-size:15px;letter-spacing:.05em;display:block;margin:14px 0 4px;
+}
+.art-body ul{list-style:none;margin:6px 0 4px}
+.art-body li{position:relative;padding-left:20px;font-size:14.5px;margin-bottom:8px;color:var(--ink)}
+.art-body li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:7px;background:var(--gold);border-radius:50%}
+.callout{
+  margin-top:14px;padding:13px 16px;border-radius:4px;font-size:14px;line-height:1.7;
+}
+.callout.a{background:rgba(184,36,43,.07);border-left:3px solid var(--risk-a);color:#7d1f23}
+.callout.b{background:rgba(31,111,74,.07);border-left:3px solid var(--risk-b);color:#185538}
+.callout b{font-weight:700}
+
+/* attachments band */
+.att{
+  background:linear-gradient(160deg,var(--navy),var(--navy-soft));color:#eee9dc;
+  border-radius:8px;padding:30px clamp(22px,4vw,40px);margin-top:22px;
+}
+.att h3{color:var(--gold);font-weight:700;font-size:19px;margin-bottom:6px}
+.att .sub{color:#aeb6cc;font-size:14px;margin-bottom:20px}
+.att-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.att-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(244,183,2,.25);
+  border-radius:6px;padding:18px 18px;
+}
+.att-card .n{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold);font-size:15px;letter-spacing:.08em}
+.att-card h4{font-weight:600;font-size:15.5px;margin:4px 0 8px;color:#fff}
+.att-card p{font-size:13px;color:#c4cbdd;line-height:1.7}
+
+/* ===== relationship overview ===== */
+.rel-roles{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;margin-top:20px}
+.role-col{background:var(--paper-2);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.role-col.a{border-top:4px solid var(--navy)}
+.role-col.b{border-top:4px solid var(--gold)}
+.role-head{padding:18px 22px 14px;border-bottom:1px solid var(--line)}
+.role-head .nm{font-weight:700;font-size:17px;color:var(--navy)}
+.role-head .rl{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold-deep);font-size:14px;margin-top:2px}
+.role-list{padding:14px 22px 20px}
+.role-list .it{font-size:14px;color:var(--ink);padding:9px 0 9px 18px;position:relative;border-bottom:1px dashed var(--line)}
+.role-list .it:last-child{border-bottom:0}
+.role-list .it::before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.rel-mid{display:flex;flex-direction:column;justify-content:center;gap:14px;padding:0 18px;min-width:150px}
+.flowpill{text-align:center;font-size:13px;color:var(--ink-soft);position:relative;padding:9px 12px;background:var(--paper);border:1px solid var(--line);border-radius:999px;white-space:nowrap}
+.flowpill b{color:var(--navy);font-weight:600;display:block;font-size:13.5px}
+.flowpill .dir{color:var(--gold-deep);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:12px}
+.rel-foot{text-align:center;font-size:13px;color:var(--ink-soft);margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+
+/* lifecycle flow */
+.flow{margin-top:20px}
+.flow-step{display:flex;gap:16px;align-items:stretch;position:relative}
+.flow-step:not(:last-child){padding-bottom:14px}
+.flow-step:not(:last-child)::after{content:"";position:absolute;left:21px;top:46px;bottom:0;width:2px;background:var(--line)}
+.fs-num{flex:0 0 44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-weight:700;font-size:19px;z-index:1;border:2px solid}
+.fs-num.a{background:#fff;color:var(--navy);border-color:var(--navy)}
+.fs-num.b{background:#fff;color:var(--gold-deep);border-color:var(--gold)}
+.fs-num.ok{background:var(--risk-b);color:#fff;border-color:var(--risk-b)}
+.fs-body{flex:1;background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:13px 18px}
+.fs-body .t{font-weight:600;font-size:15px;color:var(--navy)}
+.fs-body .d{font-size:13.5px;color:var(--ink-soft);margin-top:3px}
+.fs-body.fail{border-left:3px solid var(--risk-a);border-radius:0 8px 8px 0;background:rgba(184,36,43,.05)}
+.fs-body.fail .t{color:var(--risk-a)}
+.fs-body.reward{border-left:3px solid var(--risk-b);border-radius:0 8px 8px 0;background:rgba(31,111,74,.05)}
+.fs-body.reward .t{color:var(--risk-b)}
+
+/* comparison table */
+.cmp{width:100%;border-collapse:collapse;margin-top:20px;font-size:14px;background:var(--paper-2);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.cmp th{background:var(--navy);color:#f3f1ec;font-weight:600;padding:13px 16px;text-align:left;font-size:14px}
+.cmp th.b{color:var(--gold)}
+.cmp td{padding:12px 16px;border-top:1px solid var(--line);color:var(--ink);vertical-align:top}
+.cmp td.k{font-weight:600;color:var(--navy);width:18%;white-space:nowrap}
+.cmp tr:nth-child(even) td{background:rgba(0,14,47,.02)}
+
+@media(max-width:720px){
+  .rel-roles{grid-template-columns:1fr}
+  .rel-mid{flex-direction:row;flex-wrap:wrap;justify-content:center;padding:14px 0}
+  .cmp,.cmp tbody,.cmp tr,.cmp td{display:block;width:100%}
+  .cmp thead{display:none}
+  .cmp td.k{width:auto;padding-bottom:2px;border-top:2px solid var(--line)}
+  .cmp td{border-top:0;padding-top:4px}
+  .cmp td::before{content:attr(data-l);display:block;font-size:11px;color:var(--gold-deep);font-style:italic;font-family:"Cormorant Garamond"}
+}
+
+/* key numbers strip */
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:20px}
+.num{background:var(--paper-2);padding:22px 18px;text-align:center}
+.num .v{font-family:"Cormorant Garamond",serif;font-weight:700;color:var(--navy);font-size:clamp(26px,4vw,38px);line-height:1}
+.num .v span{color:var(--gold-deep);font-size:.55em}
+.num .k{font-size:13px;color:var(--ink-soft);margin-top:8px}
+
+/* footer */
+footer{
+  margin-top:72px;background:var(--navy);color:#aeb6cc;
+  padding:40px clamp(22px,6vw,90px);font-size:13px;line-height:1.9;
+}
+footer .big{color:#f3f1ec;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;letter-spacing:.06em;margin-bottom:8px}
+footer .disc{margin-top:16px;color:#7d87a3;font-size:12px;max-width:60ch}
+footer b{color:var(--gold)}
+
+@media(max-width:640px){
+  .art-body-inner{padding:20px 22px 24px 22px}
+  .art-top{padding:18px 20px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="eyebrow">OEM Manufacturing Agreement</div>
+  <h1>委託代工<br><b>合作契約</b></h1>
+  <div class="parties">
+    <div class="party">
+      <span class="role">Party A · 委託方（品牌）</span>
+      <span class="name">晟曜實業有限公司</span>
+      <span class="sub">統編 93555308 ｜ 代表人 鍾晉崴</span>
+    </div>
+    <span class="vs">×</span>
+    <div class="party">
+      <span class="role">Party B · 受託方（代工廠）</span>
+      <span class="name">巨昌精密有限公司</span>
+      <span class="sub">統編 42588410 ｜ 代表人 呂奕辰</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="chip">委製期間 <b>2026.07.01 – 2029.06.30</b></span>
+    <span class="chip">合作型態 <b>客製化板金 OEM</b></span>
+    <span class="chip">顧問公司 <b>仕坦登企業管理顧問有限公司</b></span>
+    <span class="chip">附件 <b>四份（同等效力）</b></span>
+  </div>
+</header>
+
+<div class="note">
+  <div class="card">
+    這份契約的合作架構：晟曜（甲方）負責圖面、配方、下單、驗收跟對外銷售；巨昌（乙方）依圖代工、穩定供貨。下面把每一條都用白話整理過，並標出各條主要是誰負責、哪些是雙方共同的重點，方便一起看、一起對。
+    <div class="legend">
+      <span><i class="dot a"></i>乙方（巨昌）主要義務</span>
+      <span><i class="dot b"></i>架構說明 / 雙方共識</span>
+      <span><i class="dot g"></i>關鍵金額 · 時效 · 機制</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- 合作關係總覽 -->
+  <div class="section-head"><span class="kicker">Overview</span><h2>合作關係總覽</h2></div>
+
+  <div class="rel-roles">
+    <div class="role-col a">
+      <div class="role-head"><div class="nm">晟曜實業（甲方）</div><div class="rl">品牌經營 · 委託方</div></div>
+      <div class="role-list">
+        <div class="it">提供設計圖、規格、配方、製程</div>
+        <div class="it">發出採購單 · 驗收</div>
+        <div class="it">對外銷售 · 客戶服務</div>
+        <div class="it">認定 QO · 結算季度退佣</div>
+      </div>
+    </div>
+    <div class="rel-mid">
+      <div class="flowpill"><span class="dir">甲 → 乙</span><b>技術資料</b></div>
+      <div class="flowpill"><span class="dir">甲 → 乙</span><b>採購單</b></div>
+      <div class="flowpill"><span class="dir">乙 → 甲</span><b>合格貨品</b></div>
+    </div>
+    <div class="role-col b">
+      <div class="role-head"><div class="nm">巨昌精密（乙方）</div><div class="rl">受託代工 · 製造方</div></div>
+      <div class="role-list">
+        <div class="it">依圖製造 · 自主品管</div>
+        <div class="it">如期交貨 · 事前預警</div>
+        <div class="it">穩定供貨 · 確保產能</div>
+        <div class="it">圖面保密 · 不得轉第三人</div>
+      </div>
+    </div>
+  </div>
+  <div class="rel-foot">委製期間 2026.07.01 – 2029.06.30（屆滿前一個月得書面合意續約）｜ 合作型態 客製化板金 OEM</div>
+
+  <!-- 訂單生命週期 -->
+  <div class="section-head"><span class="kicker">Order lifecycle</span><h2>訂單流程</h2></div>
+  <div class="flow">
+    <div class="flow-step">
+      <div class="fs-num a">1</div>
+      <div class="fs-body"><div class="t">甲方發出採購單</div><div class="d">載明品名、規格、數量、單價、交期、品質條件</div></div>
+    </div>
+    <div class="flow-step">
+      <div class="fs-num b">2</div>
+      <div class="fs-body"><div class="t">乙方三日內簽回（報價即審圖）</div><div class="d">報價即視為已審閱並接受圖面尺寸、公差、註記；逾期視為拒接</div></div>
+    </div>
+    <div class="flow-step">
+      <div class="fs-num b">3</div>
+      <div class="fs-body"><div class="t">依圖製造 · 下道工序前自主品管</div><div class="d">每站轉下一製程前先自檢，雷切→折床→焊接→銑床→烤漆</div></div>
+    </div>
+    <div class="flow-step">
+      <div class="fs-num b">4</div>
+      <div class="fs-body"><div class="t">如期交貨</div><div class="d">評估可能延誤者，須於原交期前三個工作日書面預警</div></div>
+    </div>
+    <div class="flow-step">
+      <div class="fs-num a">5</div>
+      <div class="fs-body"><div class="t">甲方驗收</div><div class="d">不合格者依指示換貨、補正或退款，最遲三個工作日內完成</div></div>
+    </div>
+    <div class="flow-step">
+      <div class="fs-num a" style="border-color:var(--risk-a);color:var(--risk-a)">✕</div>
+      <div class="fs-body fail"><div class="t">驗收不合格 → 重工補正</div><div class="d">該訂單不計入 QO；衍生重工與運費由乙方負擔、可自貨款扣抵</div></div>
+    </div>
+    <div class="flow-step">
+      <div class="fs-num ok">✓</div>
+      <div class="fs-body"><div class="t">認定合格訂單 QO</div><div class="d">同時符合：三日簽回 + 準時交貨 + 通過驗收 + 自製或核可代工</div></div>
+    </div>
+    <div class="flow-step">
+      <div class="fs-num ok">$</div>
+      <div class="fs-body reward"><div class="t">季度退佣結算</div><div class="d">當季 QO 達 150 萬（含）以上，按含稅發票金額退佣 3%</div></div>
+    </div>
+  </div>
+
+  <!-- 權義對照 -->
+  <div class="section-head"><span class="kicker">Side by side</span><h2>雙方權利義務對照</h2></div>
+  <table class="cmp">
+    <thead><tr><th>面向</th><th>晟曜（甲方）</th><th class="b">巨昌（乙方）</th></tr></thead>
+    <tbody>
+      <tr><td class="k" data-l="面向">核心角色</td><td data-l="甲方">品牌經營、委託方</td><td data-l="乙方">受託代工、製造方</td></tr>
+      <tr><td class="k" data-l="面向">提供</td><td data-l="甲方">設計圖、規格、配方、製程</td><td data-l="乙方">廠房、設備、人力、技術執行</td></tr>
+      <tr><td class="k" data-l="面向">訂單</td><td data-l="甲方">發出正式採購單</td><td data-l="乙方">三日內簽回承接</td></tr>
+      <tr><td class="k" data-l="面向">製造</td><td data-l="甲方">變更規格須書面、必要時另議價</td><td data-l="乙方">依圖製造、不得擅自轉第三人</td></tr>
+      <tr><td class="k" data-l="面向">品質</td><td data-l="甲方">驗收、可駐廠抽驗</td><td data-l="乙方">出貨前自檢附報告、瑕疵負責</td></tr>
+      <tr><td class="k" data-l="面向">交期</td><td data-l="甲方">認定 QO 與寬限期</td><td data-l="乙方">如期交貨、延誤前三日預警</td></tr>
+      <tr><td class="k" data-l="面向">獨家</td><td data-l="甲方">合作產品只向乙方訂購</td><td data-l="乙方">確保產能滿足合理需求</td></tr>
+      <tr><td class="k" data-l="面向">智財</td><td data-l="甲方">圖面、配方、研發成果均歸甲方</td><td data-l="乙方">限本約用途、不得複製外洩</td></tr>
+      <tr><td class="k" data-l="面向">競業保密</td><td data-l="甲方">—</td><td data-l="乙方">結束後兩年競業、保密長期有效</td></tr>
+      <tr><td class="k" data-l="面向">回饋</td><td data-l="甲方">季 QO 達 150 萬退 3%</td><td data-l="乙方">開等額發票請款、30 日內收款</td></tr>
+    </tbody>
+  </table>
+
+  <!-- 關鍵數字 -->
+  <div class="section-head"><span class="kicker">At a glance</span><h2>關鍵數字一覽</h2></div>
+  <div class="nums">
+    <div class="num"><div class="v">3<span> 年</span></div><div class="k">委製期間（可續約）</div></div>
+    <div class="num"><div class="v">3<span> 日</span></div><div class="k">採購單簽回期限</div></div>
+    <div class="num"><div class="v">150<span> 萬</span></div><div class="k">季退佣 QO 門檻</div></div>
+    <div class="num"><div class="v">3<span>%</span></div><div class="k">達標季退佣比率</div></div>
+    <div class="num"><div class="v">50<span> 萬</span></div><div class="k">重大違約之約定違約金</div></div>
+    <div class="num"><div class="v">2<span> 年</span></div><div class="k">競業禁止期間</div></div>
+  </div>
+
+  <!-- 主約 -->
+  <div class="section-head"><span class="kicker">Main Body</span><h2>主約 · 十七條</h2></div>
+
+  <!-- 1 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">01</div>
+      <div class="art-titles">
+        <h3>委託代工之內容及雙方角色</h3>
+        <div class="plain">甲方是品牌方（出設計、規格、配方、下單、驗收、銷售）；乙方是純代工方，只負責照做生產。</div>
+        <div class="art-tags"><span class="tag b">角色界定</span><span class="tag a">乙方不取得任何品牌權利</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <p>明確區分兩方身分，避免日後權利混淆。</p>
+      <span class="lbl">Key points</span>
+      <ul>
+        <li>乙方僅提供「製造服務」，不因本約取得品牌、設計或配方的任何權利。</li>
+        <li>雙方不成立僱傭、合夥、代理關係——純委製。</li>
+      </ul>
+      <div class="callout b"><b>合作架構：</b>第一條先界定雙方身分，晟曜為品牌與委託方、巨昌為製造執行方，避免日後權利歸屬混淆。</div>
+    </div></div>
+  </div>
+
+  <!-- 2 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">02</div>
+      <div class="art-titles">
+        <h3>規格、配方之提供</h3>
+        <div class="plain">甲方交付「技術資料」（設計圖、規格、配方、製程）給乙方；乙方只能在本約目的內使用，不得複製、外洩。</div>
+        <div class="art-tags"><span class="tag a">乙方限定用途</span><span class="tag g">變更須另議單價/交期</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <ul>
+        <li>技術資料權利歸屬依第十一條（=全歸甲方）。</li>
+        <li>甲方可書面變更規格/配方/包裝；若影響單價、交期、產能，雙方另議。</li>
+      </ul>
+      <div class="callout a"><b>巨昌義務：</b>技術資料限本約目的內使用，不得複製、改作或外洩，相關權利與保密規範見第十一、十二條。</div>
+    </div></div>
+  </div>
+
+  <!-- 3 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">03</div>
+      <div class="art-titles">
+        <h3>委託製造期間</h3>
+        <div class="plain">2026/7/1 起算三年，至 2029/6/30 止；期滿前一個月可書面合意續約。</div>
+        <div class="art-tags"><span class="tag g">3 年</span><span class="tag a">乙方不得拒單/拒出貨</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <ul>
+        <li>期間內乙方須依指示與訂單製造，確保穩定持續供應。</li>
+        <li>除甲方事前同意或不可抗力外，乙方不得拒單、拒出貨或停止供貨。</li>
+      </ul>
+      <div class="callout b"><b>合作重點：</b>穩定持續供貨是本約的基礎，搭配第八條獨家委製、第十條競業，形成長期合作的相互承諾。</div>
+    </div></div>
+  </div>
+
+  <!-- 4 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">04</div>
+      <div class="art-titles">
+        <h3>訂貨、製造及交貨</h3>
+        <div class="plain">甲方發正式採購單（品名/規格/數量/單價/交期/品質）；乙方須 3 工作日內簽回，逾期視為拒絕承接。</div>
+        <div class="art-tags"><span class="tag g">3 工作日簽回</span><span class="tag a">轉第三人代工須核可</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <ul>
+        <li>未經甲方書面核可，乙方不得把製造轉給第三人代工。</li>
+        <li>原料短缺、設備故障等可能延誤，須立即通知；可歸責乙方之延誤要賠償。</li>
+        <li>單價以雙方確認報價為準，調整須書面合意。</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <!-- 5 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">05</div>
+      <div class="art-titles">
+        <h3>產品品質及驗收</h3>
+        <div class="plain">品質以簽約當時的品管標準（附件三）為最低標；出貨前須自檢並附報告，驗收不合格要換貨/補正/退款。</div>
+        <div class="art-tags"><span class="tag a">瑕疵全責</span><span class="tag a">含對消費者賠償</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <ul>
+        <li>製造、儲存、運輸不得違反消保法、公平法、食安法、商標法等。</li>
+        <li>乙方就瑕疵負「一切責任」，包括對甲方及消費者的賠償。</li>
+      </ul>
+      <div class="callout a"><b>巨昌義務：</b>就產品瑕疵負責，並涵蓋對甲方及終端消費者之賠償，因此出貨前的品質把關格外重要（詳見附件三）。</div>
+    </div></div>
+  </div>
+
+  <!-- 6 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">06</div>
+      <div class="art-titles">
+        <h3>合格訂單（QO）之認定</h3>
+        <div class="plain">QO = 同時符合「3 日內簽回＋交期內完成＋通過驗收＋自製或核可代工」的訂單，金額按乙方開立的含稅發票算。</div>
+        <div class="art-tags"><span class="tag g">退佣計算基礎</span><span class="tag g">寬限期 3→5 日</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <span class="lbl">不計入 QO 的情形</span>
+      <ul>
+        <li>未於 3 日內簽回 / 延誤超過寬限期 / 因品質導致退貨扣款（損失乙方負擔）。</li>
+        <li>未經核可擅自轉第三人代工。</li>
+        <li>乙方單方減量逾原採購單 10%，減量金額自當年度 QO 累計「倒扣」。</li>
+      </ul>
+      <span class="lbl">寬限期</span>
+      <ul>
+        <li>原則 3 日；有正當理由且事前通知經同意，得延至 5 日。</li>
+        <li>若因乙方延誤致甲方對客戶違約，寬限期不適用，該單直接認定為非 QO。</li>
+      </ul>
+      <div class="callout b"><b>結算機制：</b>甲方每季結束 15 日內出 QO 結算單，乙方 7 日內簽認；逾期未具體異議視為確認，且除明顯錯誤外不得爭執。</div>
+    </div></div>
+  </div>
+
+  <!-- 7 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">07</div>
+      <div class="art-titles">
+        <h3>產品研發及打樣</h3>
+        <div class="plain">甲方可委託乙方研發/打樣；乙方須以善良管理人注意義務配合，逐版樣品要先通過內部測試達可商品化標準。</div>
+        <div class="art-tags"><span class="tag a">須附研發流程報告</span><span class="tag b">成果權利歸甲方</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <ul>
+        <li>須即時回報進度與反饋，提供足夠技術細節的流程報告供甲方追蹤。</li>
+        <li>原料器具須合法；甲方有需要時，乙方須配合工廠訪視與衛安資料。</li>
+        <li>研發成果（配方/技術/製程）權利歸屬依第十一條（=歸甲方）。</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <!-- 8 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">08</div>
+      <div class="art-titles">
+        <h3>獨家委託製造</h3>
+        <div class="plain">期間內甲方的合作產品只向乙方訂購（不自製、不找第三方）——但乙方若無故拒單、無法供貨或被終止，則不受此限。</div>
+        <div class="art-tags"><span class="tag b">甲方獨家承諾（附條件）</span><span class="tag a">乙方須保證產能</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <ul>
+        <li>乙方須確保產能足以滿足甲方合理訂購需求。</li>
+        <li>若乙方產能不足致無法供貨，甲方可自製或委託第三方，不受獨家限制。</li>
+      </ul>
+      <div class="callout b"><b>互惠設計：</b>晟曜承諾合作產品只向巨昌訂購；相對地，巨昌需確保產能足以支應合理訂購需求，雙方互為前提。</div>
+    </div></div>
+  </div>
+
+  <!-- 9 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">09</div>
+      <div class="art-titles">
+        <h3>季度退佣</h3>
+        <div class="plain">當季 QO 達 150 萬（含）以上，甲方按該季 QO 含稅發票金額的 3% 退佣給乙方；未達門檻該季不發，也不累計。</div>
+        <div class="art-tags"><span class="tag g">150 萬門檻 · 3%</span><span class="tag b">獎勵穩定供貨</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <ul>
+        <li>以經乙方簽認的當季 QO 結算單金額為準。</li>
+        <li>退佣確定後由乙方開等額發票請款，甲方收票後 30 日內匯款。</li>
+        <li>乙方若有違約，甲方得暫緩發給或自退佣中扣抵損害賠償。</li>
+      </ul>
+      <div class="callout g"><b>實質意義：</b>這是乙方的主要正向誘因，但與 QO 認定（第六條）和違約扣抵綁在一起——表現好才拿得到。</div>
+    </div></div>
+  </div>
+
+  <!-- 10 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">10</div>
+      <div class="art-titles">
+        <h3>競業禁止</h3>
+        <div class="plain">期間內及關係結束後 2 年，乙方不得自製/委製/受託製造與合作產品相同或高度相似之產品。</div>
+        <div class="art-tags"><span class="tag a">結束後 2 年</span><span class="tag a">取得圖資即生效</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <ul>
+        <li>即使雙方未進入或中止委製，自甲方提供技術資料之日起，乙方就有競業禁止義務。</li>
+        <li>禁止私下接觸甲方客戶承接同類訂單，禁止洩漏技術/製程/客戶資訊給競業者。</li>
+        <li>違反者構成第十三條重大違約。</li>
+      </ul>
+      <div class="callout a"><b>提醒巨昌：</b>競業義務的起算點是「取得圖資」而非實際生產，並延續至合作結束後兩年；建議事前確認既有客戶與產品線是否相容。</div>
+    </div></div>
+  </div>
+
+  <!-- 11 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">11</div>
+      <div class="art-titles">
+        <h3>所有權及智慧財產權</h3>
+        <div class="plain">甲方提供的設計/規格/配方/製程，以及依本約研發的所有成果，權利全歸甲方，並屬甲方營業秘密。</div>
+        <div class="art-tags"><span class="tag b">IP 全歸甲方</span><span class="tag b">受營業秘密法保護</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <ul>
+        <li>研發成果涵蓋著作權、商標權、專利權、營業秘密等全部權益，均歸甲方。</li>
+        <li>各方簽約前已有的 IP 不因本約移轉。</li>
+      </ul>
+      <div class="callout b"><b>權利歸屬：</b>包含共同研發成果在內，智財權明文歸晟曜所有；雙方簽約前各自既有之 IP 則不受影響。</div>
+    </div></div>
+  </div>
+
+  <!-- 12 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">12</div>
+      <div class="art-titles">
+        <h3>保密義務</h3>
+        <div class="plain">凡因本約接觸到的非公開資訊都算機密（不論是否標示「機密」）；接收方須嚴格保密，且義務不因契約終止而失效。</div>
+        <div class="art-tags"><span class="tag a">永久有效</span><span class="tag a">員工/顧問連帶責任</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <ul>
+        <li>機密範圍含設計、配方、製程、客戶名單、供應商、財務營運、報價結構等。</li>
+        <li>保密義務及於董事、經理、員工、顧問，接收方就其違約負連帶賠償。</li>
+        <li>終止/解除/經請求時，須立即交還或依指定方式處置機密資訊。</li>
+      </ul>
+      <div class="callout a"><b>重點：</b>保密義務「自簽約即生效，且不因終止、解除、屆滿而失效」——是永久性義務。</div>
+    </div></div>
+  </div>
+
+  <!-- 13 -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">13</div>
+      <div class="art-titles">
+        <h3>違約處置</h3>
+        <div class="plain">違反第 8/10/11/12 條，每次約定違約金 50 萬；其餘可歸責之違約，須賠償他方因此所生之損害（含訴訟費、律師費、罰鍰、商譽損失）。</div>
+        <div class="art-tags"><span class="tag g">每次 50 萬</span><span class="tag a">催告 7 日未補正可解約</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <ul>
+        <li>遲延或違約經催告後 7 日內未補正，他方得解除或終止契約。</li>
+        <li>違約情節重大且無法改正，他方得逕行解除或終止。</li>
+        <li>解除/終止不妨礙損害賠償的請求。</li>
+      </ul>
+      <div class="callout a"><b>違約金以「每次」計：</b>就特定條款之違反，違約金按次認定，並與實際損害賠償併行。建議雙方對交期與品質流程預先對齊，從源頭降低觸發機會。</div>
+    </div></div>
+  </div>
+
+  <!-- 14-17 compact -->
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">14</div>
+      <div class="art-titles">
+        <h3>禁止轉讓</h3>
+        <div class="plain">非經他方書面同意，任一方不得將契約權利義務之全部或一部移轉給第三人。</div>
+        <div class="art-tags"><span class="tag b">雙向限制</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <p>確保契約相對人不被任意更換，維持合作的人身信賴基礎。</p>
+    </div></div>
+  </div>
+
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">15</div>
+      <div class="art-titles">
+        <h3>法律適用及管轄</h3>
+        <div class="plain">以中華民國法律為準據法；爭議先誠信協商，不成而涉訟以臺灣桃園地方法院為第一審管轄。</div>
+        <div class="art-tags"><span class="tag g">桃園地院</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <p>雙方公司均位於桃園，管轄設計合理，便於後續訴訟與保全。</p>
+    </div></div>
+  </div>
+
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">16</div>
+      <div class="art-titles">
+        <h3>契約效力及附件</h3>
+        <div class="plain">部分條款無效不影響其他條款；四份附件均為契約一部分、同等效力；修改補充須書面合意。</div>
+        <div class="art-tags"><span class="tag g">附件＝正文同效力</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <p>可分割條款（severability）＋書面變更原則，避免口頭承諾的爭議。<b>四份附件與主約具同等效力，是雙方日常作業共同依循的細節，建議一併參閱。</b></p>
+    </div></div>
+  </div>
+
+  <div class="art">
+    <div class="art-top">
+      <div class="art-num">17</div>
+      <div class="art-titles">
+        <h3>契約之存執</h3>
+        <div class="plain">一式兩份，雙方各執一份，自簽署日生效。</div>
+        <div class="art-tags"><span class="tag b">各執一份</span></div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <p>標準存執條款。</p>
+    </div></div>
+  </div>
+
+  <!-- 附件 -->
+  <div class="section-head"><span class="kicker">Annexes</span><h2>四份附件 · 客製化板金的作業細節</h2></div>
+  <div class="att">
+    <h3>附件是雙方日常配合的依循</h3>
+    <p class="sub">本案多為個別專案（Case by Case）客製化板金加工，附件把報價、製造、交期、品管、圖面保密的作法寫清楚，主要是讓每個案子交接順、認知一致，與主約具同等效力。</p>
+    <div class="att-grid">
+      <div class="att-card">
+        <div class="n">Annex I</div>
+        <h4>合作產品品項及規格</h4>
+        <p>核心機制「<b>報價即審圖</b>」：巨昌提出報價，即視為已審閱並接受圖面所有尺寸、公差、註記與製程；報價成本視為已涵蓋達成圖面需求之全額成本。註記與公差須逐項落實，未標公差者依 CNS 一般公差或雙方約定之業界標準辦理。</p>
+      </div>
+      <div class="att-card">
+        <div class="n">Annex II</div>
+        <h4>訂貨、生產及配送條件</h4>
+        <p>「<b>交期確認＋事前預警</b>」：若評估可能延誤，最遲於原交期前 <b>3 個工作日</b>書面通報（含進度／原因／新交期）。未依限通報者，該訂單列為非 QO 並依第十三條處理。延誤逾 3 日時，甲方得接續後續製程（轉外廠續作），衍生差額費用由巨昌負擔。</p>
+      </div>
+      <div class="att-card">
+        <div class="n">Annex III</div>
+        <h4>品質管理標準及驗收</h4>
+        <p>「<b>下道工序前自主品管</b>」：每個製程轉下一站前先自檢（雷切→折床→焊接→銑床→烤漆）。因瑕疵流轉造成的重工、退漆、報廢、運費由巨昌負擔，並得自貨款扣抵。晟曜 QC 可駐廠／現場抽驗，巨昌配合提供環境並出借量測工具。</p>
+      </div>
+      <div class="att-card">
+        <div class="n">Annex IV</div>
+        <h4>研發、打樣及圖面保密</h4>
+        <p>首件須 100% 依圖製作；複雜結構之全機組裝，巨昌須指派至少 1 名固定台籍技術人員全程協同，以利技術移轉。若巨昌未配合致甲方人員代行組裝，按<b>每人每小時 800 元</b>計列勞務費並自貨款扣抵。圖面屬核心營業秘密，外協須事前核可並簽保密協議，專案結束須<b>銷毀／刪除</b>所有圖檔。圖面外洩之約定違約金為每次 <b>50 萬</b>，超過部分依實際損害另計。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 合作的話 -->
+  <div class="section-head"><span class="kicker">A note from us</span><h2>給呂總的幾句話</h2></div>
+  <div class="art open">
+    <div class="art-top">
+      <div class="art-num">·</div>
+      <div class="art-titles">
+        <h3>這份契約，是想跟巨昌長期合作的開始</h3>
+        <div class="plain">把合作的方式先講清楚，後面配合起來大家都比較安心。</div>
+      </div>
+      <span class="chev">⌄</span>
+    </div>
+    <div class="art-body"><div class="art-body-inner">
+      <p>會找巨昌，主要是看重貴公司的板金製造實力跟現場的人。晟曜這邊負責品牌、設計跟接單，巨昌負責把東西做出來、做穩，剛好把彼此最強的地方接起來。我們希望的不只是單純的下單出貨，而是把每個案子當成兩家一起做出來的東西，案子做得越好，這個品牌的口碑越強，回過頭巨昌的單也會越穩、越長。</p>
+      <span class="lbl">關於獨家跟退佣</span>
+      <p>合作產品晟曜會優先給巨昌做（第八條獨家），也設了季退佣（當季 QO 達 150 萬退 3%）回饋穩定配合。量做越大、配合越順，等於一起把餅做大、一起分。</p>
+      <span class="lbl">關於品質跟交期</span>
+      <p>附件裡的事前預警、源頭品管這些，其實就是讓雙方都安心——巨昌早點講、源頭顧好，晟曜也才敢把更多新品、更大的案子帶過來。品質做出來，是兩家一起累積的資產，不是成本。</p>
+      <span class="lbl">關於後面</span>
+      <p>委製期間三年，到期前一個月可以再談續約。希望這三年配合順利，後面能一起把生意做得更久。內容如有需要補充或調整的地方，再請呂總隨時提出，我們一起把細節談清楚。</p>
+      <div class="callout b"><b>一句話：</b>選擇巨昌是看重貴公司的技術跟人，希望這份契約能成為長期合作的起點，把品牌一起做大、把生意一起做久。</div>
+    </div></div>
+  </div>
+
+</div>
+
+
+<footer>
+  <div class="big">STATON 仕坦登企業管理顧問</div>
+  委託代工合作契約 v2 ｜ 晟曜實業有限公司 × 巨昌精密有限公司<br>
+  品牌色 <b>Navy #000e2f</b> · <b>Gold #f4b702</b> ｜ 中文 思源宋體 · 英數 Cormorant Garamond
+  <div class="disc">本文件為契約內容之白話整理與重點標示，方便雙方閱讀與討論，不構成法律意見；正式權利義務以雙方用印之契約正本及其附件為準。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.art-top').forEach(function(t){
+  t.addEventListener('click',function(){
+    t.parentElement.classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>
